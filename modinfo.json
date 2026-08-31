@@ -1,0 +1,87 @@
+{
+    "Version": "1.0.0",
+    "Anno": 8,
+    "ModID": "custom-monument-config-ewjax",
+    "Difficulty": "easier",
+    "GameSetup": 
+    {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+    },
+    "Dependencies": 
+    {
+        "Require": [],
+        "Optional": [],
+        "LoadAfter": ["taludas-communitybugfixmod"],
+        "Deprecate": []
+    },
+    "Options": 
+    {
+        "colosseum_preparationtime_multiplier": 
+        {
+            "label": "Colosseum Event Preparation Time Multiplier (1.0 = vanilla)",
+            "default": "1.0"
+        },
+        "colosseum_eventduration_multiplier": 
+        {
+            "label": "Colosseum Event Duration Multiplier (1.0 = vanilla)",
+            "default": "1.0"
+        },
+        "hippodrome_preparationtime_multiplier": 
+        {
+            "label": "Hippodrome Event Preparation Time Multiplier (1.0 = vanilla)",
+            "default": "1.0"
+        },
+        "hippodrome_eventduration_multiplier": 
+        {
+            "label": "Hippodrome Event Duration Multiplier (1.0 = vanilla)",
+            "default": "1.0"
+        },
+        "hippodrome_cooldown_multiplier": 
+        {
+            "label": "Hippodrome Event Cooldown Multiplier (1.0 = vanilla)",
+            "default": "1.0"
+        },
+        "hippodrome_splendorpot_multiplier": 
+        {
+            "label": "Hippodrome Race Splendor Pot Multiplier (1.0 = vanilla)",
+            "default": "1.0"
+        }
+
+    },
+    "Category": 
+    {
+        "Chinese": "Gameplay",
+        "English": "Gameplay",
+        "French": "Gameplay",
+        "German": "Gameplay",
+        "Italian": "Gameplay",
+        "Japanese": "Gameplay",
+        "Korean": "Gameplay",
+        "Polish": "Gameplay",
+        "Russian": "Gameplay",
+        "Spanish": "Gameplay",
+        "Taiwanese": "Gameplay"
+    },
+    "ModName": 
+    {
+        "Chinese": "Custom Monument Config (ewjax)",
+        "English": "Custom Monument Config (ewjax)",
+        "French": "Custom Monument Config (ewjax)",
+        "German": "Custom Monument Config (ewjax)",
+        "Italian": "Custom Monument Config (ewjax)",
+        "Japanese": "Custom Monument Config (ewjax)",
+        "Korean": "Custom Monument Config (ewjax)",
+        "Polish": "Custom Monument Config (ewjax)",
+        "Russian": "Custom Monument Config (ewjax)",
+        "Spanish": "Custom Monument Config (ewjax)",
+        "Taiwanese": "Custom Monument Config (ewjax)"
+    },
+    "Description": {
+        "English": "Custom Monument Config (ewjax)"
+    },
+    "CreatorName": "ewjax",
+    "CreatorContact": ""
+}

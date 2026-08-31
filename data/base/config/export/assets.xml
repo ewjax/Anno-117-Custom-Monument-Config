@@ -1,0 +1,92 @@
+<ModOps>
+
+    <!--
+    ==========================================================================================
+    Customizable Options for Monument Events:
+        - Colosseum Preparation Time Multiplier
+        - Colosseum Event Duration Multiplier
+        - Hippodrome Preparation Time Multiplier
+        - Hippodrome Event Duration Multiplier
+        - Hippodrome Event Cooldown Multiplier
+        - Hippodrome Race Splendor Pot Multiplier
+
+    ========================================================================================== -->
+
+    <!--
+    ==========================================================================================
+    Colosseum
+    ========================================================================================== -->
+
+    <!-- Colosseum Preparation Time, EventDuration Time -->
+    <ModOp GUID="40562,40563,40564" Type="Merge" Path="/Values/MonumentEvent">
+        <!--
+            <ModValue Insert="0.5 * self::node()"/>
+            <ModValue Insert="$colosseum_preparationtime_multiplier * self::node()"/>
+            <ModValue Insert="$colosseum_eventduration_multiplier * self::node()"/>
+        -->
+        <PreparationTime>
+            <ModValue Insert="$colosseum_preparationtime_multiplier * self::node()"/>
+        </PreparationTime>
+        <EventDuration>
+            <ModValue Insert="$colosseum_eventduration_multiplier * self::node()"/>
+        </EventDuration>
+    </ModOp>
+
+
+
+    <!--
+    ==========================================================================================
+    Hippodrome
+    ========================================================================================== -->
+    <!-- Hippodrome Preparation Time, EventDuration Time -->
+    <ModOp GUID="154437,154438,154439" Type="Merge" Path="/Values/MonumentEvent">
+        <!--
+            <ModValue Insert="0.5 * self::node()"/>
+            <ModValue Insert="$hippodrome_preparationtime_multiplier * self::node()"/>
+            <ModValue Insert="$hippodrome_eventduration_multiplier * self::node()"/>
+            <ModValue Insert="$hippodrome_cooldown_multiplier * self::node()" />
+            <ModValue Insert="$hippodrome_splendorpot_multiplier * self::node()" />
+        -->
+        <PreparationTime>
+            <ModValue Insert="$hippodrome_preparationtime_multiplier * self::node()"/>
+        </PreparationTime>
+        <EventDuration>
+            <ModValue Insert="$hippodrome_eventduration_multiplier * self::node()"/>
+        </EventDuration>
+    </ModOp>
+
+    <!-- Hippodrome Cooldown Time 
+        This syntax sweeps through and changes all the Cooldown values for all ranks of the Hippodrome
+    -->
+    <ModOp Merge="@152714/BuildingRank/CooldownPerRank/Item">
+        <Cooldown>
+            <ModValue Insert="$hippodrome_cooldown_multiplier * self::node()" />
+        </Cooldown>
+    </ModOp>
+
+    <!-- Hippodrome Splendor Pot 
+        Note that this syntax works:
+            <ModOp Merge="//TotalSplendorPot">
+        but we will use the more explicit version below for clarity and future-proofing
+    -->
+    <ModOp Merge="@152714/MonumentEventBuilding/SplendorWinningsPot/RewardSplit">
+        <Easy>
+            <TotalSplendorPot>
+                <ModValue Insert="$hippodrome_splendorpot_multiplier * self::node()" />
+            </TotalSplendorPot> 
+        </Easy>
+        <Medium>
+            <TotalSplendorPot>
+                <ModValue Insert="$hippodrome_splendorpot_multiplier * self::node()" />
+            </TotalSplendorPot> 
+        </Medium>
+        <Hard>
+            <TotalSplendorPot>
+                <ModValue Insert="$hippodrome_splendorpot_multiplier * self::node()" />
+            </TotalSplendorPot> 
+        </Hard>
+    </ModOp>
+
+
+</ModOps>
+
