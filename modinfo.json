@@ -46,7 +46,7 @@
         },
         "hippodrome_splendorpot_multiplier": 
         {
-            "label": "Hippodrome Race Splendor Pot Multiplier (1.0 = vanilla)",
+            "label": "Hippodrome Race Total Splendor Pot Multiplier (1.0 = vanilla)",
             "default": "1.0"
         }
 
