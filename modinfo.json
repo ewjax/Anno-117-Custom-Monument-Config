@@ -21,34 +21,48 @@
     {
         "colosseum_preparationtime_multiplier": 
         {
-            "label": "Colosseum Event Preparation Time Multiplier (1.0 = vanilla)",
+            "label": "Colosseum Event Preparation Time Multiplier (vanilla = 1.0)",
             "default": "1.0"
         },
         "colosseum_eventduration_multiplier": 
         {
-            "label": "Colosseum Event Duration Multiplier (1.0 = vanilla)",
-            "default": "1.0"
+            "label": "Colosseum Event Duration Multiplier (vanilla = 1.0)",
+            "default": "0.5"
         },
         "hippodrome_preparationtime_multiplier": 
         {
-            "label": "Hippodrome Event Preparation Time Multiplier (1.0 = vanilla)",
+            "label": "Hippodrome Event Preparation Time Multiplier (vanilla = 1.0)",
             "default": "1.0"
         },
         "hippodrome_eventduration_multiplier": 
         {
-            "label": "Hippodrome Event Duration Multiplier (1.0 = vanilla)",
+            "label": "Hippodrome Event Duration Multiplier (vanilla = 1.0)",
             "default": "1.0"
         },
         "hippodrome_cooldown_multiplier": 
         {
-            "label": "Hippodrome Event Cooldown Multiplier (1.0 = vanilla)",
-            "default": "1.0"
+            "label": "Hippodrome Event Cooldown Multiplier (vanilla = 1.0)",
+            "default": "0.2"
         },
         "hippodrome_splendorpot_multiplier": 
         {
-            "label": "Hippodrome Race Total Splendor Pot Multiplier (1.0 = vanilla)",
+            "label": "Hippodrome Race Total Splendor Pot Multiplier (vanilla = 1.0)",
             "default": "1.0"
+        },
+        "honoured_guest_visit_multiplier": 
+        {
+            "label": "Honoured Guest Visit Time Multiplier (vanilla = 1.0)",
+            "default": "0.2"
+        },
+        "honoured_guest_heroic_percent_chance_per_splendor_stage": 
+        {
+            "label": "Honoured Guest Heroic Percent Chance Per Splendor Stage (2.0% = vanilla)", 
+            "type": "enum",
+            "default": "2.0",
+            "values": ["2.0", "2.5", "3.0", "3.5", "4.0"],
+            "labels": ["2.0%", "2.5%", "3.0%", "3.5%", "4.0%"]
         }
+
 
     },
     "Category": 

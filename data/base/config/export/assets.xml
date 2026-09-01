@@ -9,6 +9,8 @@
         - Hippodrome Event Duration Multiplier
         - Hippodrome Event Cooldown Multiplier
         - Hippodrome Race Splendor Pot Multiplier
+        - Honoured Guest Visit Multiplier
+        - Honoured Guest Heroic Percent Chance Per Splendor Stage
 
     ========================================================================================== -->
 
@@ -38,6 +40,7 @@
     ==========================================================================================
     Hippodrome
     ========================================================================================== -->
+
     <!-- Hippodrome Preparation Time, EventDuration Time -->
     <ModOp GUID="154437,154438,154439" Type="Merge" Path="/Values/MonumentEvent">
         <!--
@@ -55,21 +58,23 @@
         </EventDuration>
     </ModOp>
 
-    <!-- Hippodrome Cooldown Time 
-        This syntax sweeps through and changes all the Cooldown values for all ranks of the Hippodrome
-    -->
+    <!-- Hippodrome Cooldown Time -->
     <ModOp Merge="@152714/BuildingRank/CooldownPerRank/Item">
         <Cooldown>
             <ModValue Insert="$hippodrome_cooldown_multiplier * self::node()" />
         </Cooldown>
     </ModOp>
 
-    <!-- Hippodrome Splendor Pot 
-        Note that this syntax works:
-            <ModOp Merge="//TotalSplendorPot">
-        but we will use the more explicit version below for clarity and future-proofing
-    -->
+    <!-- Hippodrome Splendor Pot -->
     <ModOp Merge="@152714/MonumentEventBuilding/SplendorWinningsPot/RewardSplit">
+        <!--
+            Note that this syntax also works, but we will use the more explicit version 
+            for clarity and future-proofing
+                <ModOp Merge="//TotalSplendorPot">
+            
+                <ModValue Insert="0.5 * self::node()" />
+                <ModValue Insert="$hippodrome_splendorpot_multiplier * self::node()" />
+        -->
         <Easy>
             <TotalSplendorPot>
                 <ModValue Insert="$hippodrome_splendorpot_multiplier * self::node()" />
@@ -87,6 +92,24 @@
         </Hard>
     </ModOp>
 
+    <!--
+    ==========================================================================================
+    Honoured Guest
+    ========================================================================================== -->
+
+    <!-- Honoured Guest Visit Time Multiplier -->
+    <ModOp Merge="@173079/VisitorsConfig/DeliveryTimeByCityLevel/Item/Time">
+        <!--
+            <ModValue Insert="0.5 * self::node()" />
+            <ModValue Insert="$honoured_guest_visit_multiplier * self::node()" />
+        -->
+        <ModValue Insert="$honoured_guest_visit_multiplier * self::node()" />
+    </ModOp>
+
+    <!-- Honoured Guest Heroic Percent Chance Per Splendor Stage (Default = 2%) -->
+    <ModOp Merge="@173079/VisitorsConfig/VisitorPools/Item/BaseChanceFromSplendorStages">
+        <ModValue Insert="$honoured_guest_heroic_percent_chance_per_splendor_stage" />
+    </ModOp>
 
 </ModOps>
 
