@@ -1,6 +1,6 @@
 # Custom Monument Configuration
 
-This mod gives the user the ability to adjust various parameters used in the Anno 117 monuments (Colosseum and Hippodrome).
+This mod gives the user the ability to adjust various parameters used in the Anno 117 monuments (Colosseum and Hippodrome), as well as Honoured Guest parameters.
 
 Vanilla Values are as shown:
 
