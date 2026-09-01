@@ -65,6 +65,13 @@
         </Cooldown>
     </ModOp>
 
+
+    <!-- Hippodrome Splendor Pot -->
+    <ModOp Merge="@152714/MonumentEventBuilding/SplendorWinningsPot/RewardSplit/*/TotalSplendorPot">
+        <ModValue Insert="$hippodrome_splendorpot_multiplier * self::node()" />
+    </ModOp>
+
+
     <!-- Hippodrome Splendor Pot -->
     <ModOp Merge="@152714/MonumentEventBuilding/SplendorWinningsPot/RewardSplit">
         <!--
@@ -75,6 +82,8 @@
                 <ModValue Insert="0.5 * self::node()" />
                 <ModValue Insert="$hippodrome_splendorpot_multiplier * self::node()" />
         -->
+
+        <!--
         <Easy>
             <TotalSplendorPot>
                 <ModValue Insert="$hippodrome_splendorpot_multiplier * self::node()" />
@@ -90,6 +99,7 @@
                 <ModValue Insert="$hippodrome_splendorpot_multiplier * self::node()" />
             </TotalSplendorPot> 
         </Hard>
+        -->
     </ModOp>
 
     <!--
