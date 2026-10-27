@@ -1,3 +1,4 @@
+
 <ModOps>
 
     <!--
@@ -65,42 +66,11 @@
         </Cooldown>
     </ModOp>
 
-
     <!-- Hippodrome Splendor Pot -->
     <ModOp Merge="@152714/MonumentEventBuilding/SplendorWinningsPot/RewardSplit/*/TotalSplendorPot">
         <ModValue Insert="$hippodrome_splendorpot_multiplier * self::node()" />
     </ModOp>
 
-
-    <!-- Hippodrome Splendor Pot -->
-    <ModOp Merge="@152714/MonumentEventBuilding/SplendorWinningsPot/RewardSplit">
-        <!--
-            Note that this syntax also works, but we will use the more explicit version 
-            for clarity and future-proofing
-                <ModOp Merge="//TotalSplendorPot">
-            
-                <ModValue Insert="0.5 * self::node()" />
-                <ModValue Insert="$hippodrome_splendorpot_multiplier * self::node()" />
-        -->
-
-        <!--
-        <Easy>
-            <TotalSplendorPot>
-                <ModValue Insert="$hippodrome_splendorpot_multiplier * self::node()" />
-            </TotalSplendorPot> 
-        </Easy>
-        <Medium>
-            <TotalSplendorPot>
-                <ModValue Insert="$hippodrome_splendorpot_multiplier * self::node()" />
-            </TotalSplendorPot> 
-        </Medium>
-        <Hard>
-            <TotalSplendorPot>
-                <ModValue Insert="$hippodrome_splendorpot_multiplier * self::node()" />
-            </TotalSplendorPot> 
-        </Hard>
-        -->
-    </ModOp>
 
     <!--
     ==========================================================================================
