@@ -23,7 +23,8 @@
         {
             "type": "group",
             "label": "##### Colosseum Event Options #####",
-            "collapsed": true
+            "collapsed": true, 
+            "default": true
         },
         "colosseum_preparationtime_multiplier": 
         {
@@ -42,7 +43,8 @@
         {
             "type": "group",
             "label": "##### Hippodrome Event Options #####",
-            "collapsed": true
+            "collapsed": true,
+            "default": true
         },
         "hippodrome_preparationtime_multiplier": 
         {
@@ -73,7 +75,8 @@
         {
             "type": "group",
             "label": "##### Honoured Guest Event Options #####",
-            "collapsed": true
+            "collapsed": true,
+            "default": true
         },
         "honoured_guest_visit_multiplier": 
         {
