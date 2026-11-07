@@ -1,5 +1,5 @@
 {
-    "Version": "1.0.1",
+    "Version": "1.0.3",
     "Anno": 8,
     "ModID": "custom-monument-config-ewjax",
     "Difficulty": "easier",
@@ -19,44 +19,72 @@
     },
     "Options": 
     {
+        "colosseum_group":
+        {
+            "type": "group",
+            "label": "##### Colosseum Event Options #####",
+            "collapsed": true
+        },
         "colosseum_preparationtime_multiplier": 
         {
-            "label": "Colosseum Event Preparation Time Multiplier (vanilla = 1.0)",
+            "group": "colosseum_group",
+            "label": "Colosseum Event Preparation Time Multiplier (default = 1.0)",
             "default": "1.0"
         },
         "colosseum_eventduration_multiplier": 
         {
-            "label": "Colosseum Event Duration Multiplier (vanilla = 1.0)",
-            "default": "0.5"
+            "group": "colosseum_group",
+            "label": "Colosseum Event Duration Multiplier (default = 1.0)",
+            "default": "1.0"
+        },
+
+        "hippodrome_group":
+        {
+            "type": "group",
+            "label": "##### Hippodrome Event Options #####",
+            "collapsed": true
         },
         "hippodrome_preparationtime_multiplier": 
         {
-            "label": "Hippodrome Event Preparation Time Multiplier (vanilla = 1.0)",
+            "group": "hippodrome_group",
+            "label": "Hippodrome Event Preparation Time Multiplier (default = 1.0)",
             "default": "1.0"
         },
         "hippodrome_eventduration_multiplier": 
         {
-            "label": "Hippodrome Event Duration Multiplier (vanilla = 1.0)",
+            "group": "hippodrome_group",
+            "label": "Hippodrome Event Duration Multiplier (default = 1.0)",
             "default": "1.0"
         },
         "hippodrome_cooldown_multiplier": 
         {
-            "label": "Hippodrome Event Cooldown Multiplier (vanilla = 1.0)",
-            "default": "0.2"
+            "group": "hippodrome_group",
+            "label": "Hippodrome Event Cooldown Multiplier (default = 1.0)",
+            "default": "1.0"
         },
         "hippodrome_splendorpot_multiplier": 
         {
-            "label": "Hippodrome Race Total Splendor Pot Multiplier (vanilla = 1.0)",
+            "group": "hippodrome_group",
+            "label": "Hippodrome Race Total Splendor Pot Multiplier (default = 1.0)",
             "default": "1.0"
+        },
+
+        "honoured_guest_group":
+        {
+            "type": "group",
+            "label": "##### Honoured Guest Event Options #####",
+            "collapsed": true
         },
         "honoured_guest_visit_multiplier": 
         {
-            "label": "Honoured Guest Visit Time Multiplier (vanilla = 1.0)",
-            "default": "0.2"
+            "group": "honoured_guest_group",
+            "label": "Honoured Guest Visit Time Multiplier (default = 1.0)",
+            "default": "1.0"
         },
         "honoured_guest_heroic_percent_chance_per_splendor_stage": 
         {
-            "label": "Honoured Guest Heroic Percent Chance Per Splendor Stage (2.0% = vanilla)", 
+            "group": "honoured_guest_group",
+            "label": "Honoured Guest Heroic Percent Chance Per Splendor Stage (2.0% = default)", 
             "type": "enum",
             "default": "2.0",
             "values": ["2.0", "2.5", "3.0", "3.5", "4.0"],
